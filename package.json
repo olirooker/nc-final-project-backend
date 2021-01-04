@@ -1,0 +1,24 @@
+{
+  "name": "nc-final-project-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "knex-migrate": "^1.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adfharrison/nc-final-project-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adfharrison/nc-final-project-backend/issues"
+  },
+  "homepage": "https://github.com/adfharrison/nc-final-project-backend#readme"
+}
