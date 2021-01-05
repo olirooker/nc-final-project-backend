@@ -1,7 +1,7 @@
 module.exports = [
   {
-    first_name: 'Marta',
-    last_name: 'Moreno',
+    first_name: 'Alba',
+    last_name: 'Mateos',
     phone_number: '07367961308',
     relationship_user: 'friend',
     house_number: 35,
@@ -11,9 +11,9 @@ module.exports = [
     user_id: 1
   },
   {
-    first_name: 'Peter',
-    last_name: 'Parker',
-    phone_number: '07890890890',
+    first_name: 'Owais',
+    last_name: 'Khalid',
+    phone_number: '07712268504',
     relationship_user: 'brother',
     house_number: 12,
     street_name: 'Leighbrook Road',
@@ -22,10 +22,21 @@ module.exports = [
     user_id: 2
   },
   {
-    first_name: 'Lana',
-    last_name: 'Lang',
+    first_name: 'Alan',
+    last_name: 'Harrison',
     phone_number: '07303403503',
     relationship_user: 'cousin',
+    house_number: 48,
+    street_name: 'Oxford Road',
+    postcode: 'M15DW',
+    city: 'Manchester',
+    user_id: 1
+  },
+  {
+    first_name: 'Oli',
+    last_name: 'Rooker',
+    phone_number: '07723522512',
+    relationship_user: 'friend',
     house_number: 48,
     street_name: 'Oxford Road',
     postcode: 'M15DW',

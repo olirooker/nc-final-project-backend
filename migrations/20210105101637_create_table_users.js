@@ -9,6 +9,7 @@ exports.up = function (knex) {
     usersTable.text('street_name').notNullable();
     usersTable.text('postcode').notNullable();
     usersTable.text('city').notNullable();
+    usersTable.text('uid').notNullable();
   });
 };
 
