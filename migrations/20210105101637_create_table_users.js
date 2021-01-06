@@ -1,6 +1,6 @@
 exports.up = function (knex) {
   return knex.schema.createTable('users', (usersTable) => {
-    usersTable.increments('user_id').primary();
+    // usersTable.increments('user_id');
     usersTable.text('first_name').notNullable();
     usersTable.text('last_name').notNullable();
     usersTable.text('username').notNullable();
@@ -9,7 +9,7 @@ exports.up = function (knex) {
     usersTable.text('street_name').notNullable();
     usersTable.text('postcode').notNullable();
     usersTable.text('city').notNullable();
-    usersTable.text('uid').notNullable();
+    usersTable.text('uid').primary();
   });
 };
 

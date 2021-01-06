@@ -8,7 +8,7 @@ module.exports = [
     street_name: 'Vesper Gate Drive',
     postcode: 'LS53NH',
     city: 'Leeds',
-    user_id: 1
+    uid: 'ouq2Vs5hq4afIZiEBV0wIUb8Fk03',
   },
   {
     first_name: 'Owais',
@@ -19,7 +19,7 @@ module.exports = [
     street_name: 'Leighbrook Road',
     postcode: 'M146DW',
     city: 'Manchester',
-    user_id: 2
+    uid: 'ouq2Vs5hq4afIZiEBV0wIUb8Fk03',
   },
   {
     first_name: 'Alan',
@@ -30,7 +30,7 @@ module.exports = [
     street_name: 'Oxford Road',
     postcode: 'M15DW',
     city: 'Manchester',
-    user_id: 1
+    uid: 'ouq2Vs5hq4afIZiEBV0wIUb8Fk04',
   },
   {
     first_name: 'Oli',
@@ -41,6 +41,6 @@ module.exports = [
     street_name: 'Oxford Road',
     postcode: 'M15DW',
     city: 'Manchester',
-    user_id: 2
-  }
+    uid: 'ouq2Vs5hq4afIZiEBV0wIUb8Fk04',
+  },
 ];

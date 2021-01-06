@@ -1,12 +1,36 @@
-const usersRouter = require("express").Router();
+const usersRouter = require('express').Router();
 const {
   getAllUsers,
   getUserByUid,
   postNewUser,
   deleteUser,
-} = require("../controllers/usersController");
-usersRouter.route("/").get(getAllUsers).post(postNewUser);
+  patchUserByUid,
+} = require('../controllers/usersController');
 
-usersRouter.route("/:uid").get(getUserByUid).patch().delete(deleteUser);
+const {
+  getContactsByUid,
+  postNewContactByUid,
+  getContactByContactId,
+  deleteContactByContactId,
+  patchContactByContactId,
+} = require('../controllers/contactsController');
+
+usersRouter.route('/').get(getAllUsers).post(postNewUser);
+
+usersRouter
+  .route('/:uid')
+  .get(getUserByUid)
+  .patch(patchUserByUid)
+  .delete(deleteUser);
+usersRouter
+  .route('/:uid/contacts')
+  .get(getContactsByUid)
+  .post(postNewContactByUid);
+
+usersRouter
+  .route('/:uid/contacts/:contact_id')
+  .get(getContactByContactId)
+  .patch(patchContactByContactId)
+  .delete(deleteContactByContactId);
 
 module.exports = usersRouter;
