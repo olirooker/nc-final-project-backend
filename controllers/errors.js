@@ -1,14 +1,9 @@
-const handlePSQLErrors = (error, req, res, next) => {
-  const badReqCodes = ["42703"];
-  if (badReqCodes.includes(error.code)) {
-    res.status(400).send({ msg: "Bad request" });
-  } else {
-    next(error);
-  }
+const send404 = (req, res, next) => {
+  res.status(404).send({ msg: "Not found" });
 };
 
-const handleInternalErrors = (error, req, res, next) => {
-  res.status(500).send({ msg: "Internal server error" });
+const send405 = (req, res, next) => {
+  res.status(405).send({ msg: "Invalid method" });
 };
 
 const handleCustomErrors = (err, req, res, next) => {
@@ -19,12 +14,19 @@ const handleCustomErrors = (err, req, res, next) => {
   }
 };
 
-const send405 = (req, res, next) => {
-  res.status(405).send({ msg: "Invalid method" });
+const handlePSQLErrors = (error, req, res, next) => {
+  const badReqCodes = ["42703"];
+  if (badReqCodes.includes(error.code)) {
+    console.log(error, "psql error");
+    res.status(400).send({ msg: "Bad request" });
+  } else {
+    next(error);
+  }
 };
 
-const send404 = (req, res, next) => {
-  res.status(404).send({ msg: "Route not found" });
+const handleInternalErrors = (error, req, res, next) => {
+  console.log(error, "Internal error");
+  res.status(500).send({ msg: "Internal server error" });
 };
 
 module.exports = {

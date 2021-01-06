@@ -15,11 +15,14 @@ const fetchUserByUid = (req) => {
     .from("users")
     .where("uid", "=", uid)
     .then((user) => {
+      if (user.length === 0) {
+        return Promise.reject({ status: 404, msg: "User not found" });
+      }
       return user[0];
     });
 };
 
-const addNewUser = (req) => {
+const sendNewUser = (req) => {
   const newUser = req.body;
   return connection
     .insert(newUser)
@@ -30,4 +33,27 @@ const addNewUser = (req) => {
     });
 };
 
-module.exports = { fetchAllUsers, fetchUserByUid, addNewUser };
+const removeUser = (req) => {
+  const uid = req.params.uid;
+  return connection
+    .del()
+    .from("users")
+    .where("uid", "=", uid)
+    .then((delCount) => {
+      if (delCount === 0) {
+        return Promise.reject({ status: 404, msg: "User not found" });
+      }
+    });
+};
+
+// const updateUser = (req) => {
+//   const uid = req.params;
+//   const whatDoWeWantToUpdate = req.body;
+
+//   return connection.select().from("users").where("uid", "=", uid);
+//   // select columns
+//   // from users table
+//   // modify if first name, if last name, etc... data to update
+// };
+
+module.exports = { fetchAllUsers, fetchUserByUid, sendNewUser, removeUser };

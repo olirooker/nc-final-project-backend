@@ -15,8 +15,8 @@ app.use(express.json());
 
 app.use("/api", apiRouter);
 app.route("/*").get(send404).all(send405);
+app.use(handleCustomErrors);
 app.use(handlePSQLErrors);
 app.use(handleInternalErrors);
-app.use(handleCustomErrors);
 
 module.exports = app;

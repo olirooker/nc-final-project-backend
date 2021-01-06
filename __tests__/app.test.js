@@ -32,7 +32,7 @@ describe("api", () => {
         });
     });
 
-    test("POST - 201 ", () => {
+    test("POST - 201 accepts an new user object and returns with posted user", () => {
       return request(app)
         .post("/api/users")
         .send({
@@ -102,6 +102,41 @@ describe("api", () => {
             city: "Manchester",
             uid: "ouq2Vs5hq4afIZiEBV0wIUb8Fk04",
           });
+        });
+    });
+
+    // test("PATCH - 201 accepts new data and returns the updated user", () => {
+    //   return request(app)
+    //     .patch("/api/users/ouq2Vs5hq4afIZiEBV0wIUb8Fk04")
+    //     .send({ phone_number: "09912268504" })
+    //     .expect(201)
+    //     .then(({ body }) => {
+    //       expect(body.user).toMatchObject({
+    //         user_id: 2,
+    //         first_name: "Peter",
+    //         last_name: "Parker",
+    //         username: "owais1996",
+    //         phone_number: "09912268504",
+    //         house_number: 59,
+    //         street_name: "Leighbrook Road",
+    //         postcode: "M146DW",
+    //         city: "Manchester",
+    //         uid: "ouq2Vs5hq4afIZiEBV0wIUb8Fk04",
+    //       });
+    //     });
+    // });
+
+    test("DELETE - 204", () => {
+      return request(app)
+        .delete("/api/users/ouq2Vs5hq4afIZiEBV0wIUb8Fk03")
+        .expect(204)
+        .then(() => {
+          return request(app)
+            .get("/api/users/ouq2Vs5hq4afIZiEBV0wIUb8Fk03")
+            .expect(404)
+            .then(({ body }) => {
+              expect(body.msg).toBe("User not found");
+            });
         });
     });
   });
