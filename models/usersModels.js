@@ -19,4 +19,15 @@ const fetchUserByUid = (req) => {
     });
 };
 
-module.exports = { fetchAllUsers, fetchUserByUid };
+const addNewUser = (req) => {
+  const newUser = req.body;
+  return connection
+    .insert(newUser)
+    .into("users")
+    .returning("*")
+    .then((user) => {
+      return user[0];
+    });
+};
+
+module.exports = { fetchAllUsers, fetchUserByUid, addNewUser };
