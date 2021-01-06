@@ -11,7 +11,7 @@
     "pg": "^8.5.1"
   },
   "scripts": {
-    "start":"node listen.js",
+    "start": "node listen.js",
     "test": "jest app.test.js --watch",
     "setup-dbs": "psql -f database/setup.sql",
     "seed-dev": "psql -f db/setup.sql && knex seed:run",
