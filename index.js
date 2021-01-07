@@ -1,1 +1,1 @@
-const hello = 'hello everyone';
+const hello = 'hello all';
