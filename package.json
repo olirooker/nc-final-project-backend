@@ -13,7 +13,7 @@
   "scripts": {
     "start": "node listen.js",
     "test": "jest app.test.js --watch",
-    "setup-dbs": "psql -f database/setup.sql",
+    "setup-dbs": "psql -f db/setup.sql",
     "seed-dev": "psql -f db/setup.sql && knex seed:run",
     "seed-test": "NODE_ENV=test knex seed:run",
     "migrate-make": "knex migrate:make",
