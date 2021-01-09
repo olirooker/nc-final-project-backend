@@ -2,7 +2,7 @@ module.exports = [
   {
     first_name: 'Alba',
     last_name: 'Mateos',
-    phone_number: '07367961308',
+    email: 'email',
     relationship_user: 'friend',
     house_number: 35,
     street_name: 'Vesper Gate Drive',
@@ -13,7 +13,7 @@ module.exports = [
   {
     first_name: 'Owais',
     last_name: 'Khalid',
-    phone_number: '07712268504',
+    eamil: 'email',
     relationship_user: 'brother',
     house_number: 12,
     street_name: 'Leighbrook Road',
@@ -24,7 +24,7 @@ module.exports = [
   {
     first_name: 'Alan',
     last_name: 'Harrison',
-    phone_number: '07789843455',
+    email: 'adfharrison@icloud.com',
     relationship_user: 'cousin',
     house_number: 48,
     street_name: 'Oxford Road',
@@ -35,7 +35,7 @@ module.exports = [
   {
     first_name: 'Oli',
     last_name: 'Rooker',
-    phone_number: '07723522512',
+    email: 'email',
     relationship_user: 'friend',
     house_number: 48,
     street_name: 'Oxford Road',
