@@ -13,7 +13,7 @@ module.exports = [
   {
     first_name: 'Owais',
     last_name: 'Khalid',
-    eamil: 'email',
+    email: 'email',
     relationship_user: 'brother',
     house_number: 12,
     street_name: 'Leighbrook Road',
