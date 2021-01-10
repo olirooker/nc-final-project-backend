@@ -25,7 +25,7 @@ const getUserByUid = (req, res, next) => {
 const postNewUser = (req, res, next) => {
   sendNewUser(req)
     .then((user) => {
-      res.status(201).send({ newUser: user });
+      res.status(201).send({ user });
     })
     .catch(next);
 };
