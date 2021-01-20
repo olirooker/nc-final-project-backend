@@ -22,6 +22,8 @@
 
 // module.exports = dbConfig[ENV];
 
+//check new heroku db info when hosting
+
 const { DB_URL } = process.env;
 const ENV = process.env.NODE_ENV || 'development';
 const baseConfig = {
