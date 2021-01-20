@@ -26,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adfharrison/nc-final-project-backend.git"
+    "url": "git+https://github.com/olirooker/nc-final-project-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adfharrison/nc-final-project-backend/issues"
+    "url": "https://github.com/olirooker/nc-final-project-backend/issues"
   },
-  "homepage": "https://github.com/adfharrison/nc-final-project-backend#readme",
+  "homepage": "https://github.com/olirooker/nc-final-project-backend#readme",
   "devDependencies": {
     "jest": "^26.6.3",
     "supertest": "^6.0.1"
