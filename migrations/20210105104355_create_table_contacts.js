@@ -9,11 +9,7 @@ exports.up = function (knex) {
     contactsTable.text('street_name').notNullable();
     contactsTable.text('postcode').notNullable();
     contactsTable.text('city').notNullable();
-    contactsTable
-      .text('uid')
-      .references('users.uid')
-
-      .onDelete('CASCADE');
+    contactsTable.text('uid').references('users.uid').onDelete('CASCADE');
     // contactsTable
     //   .integer('user_id')
     //   .references('users.user_id')
